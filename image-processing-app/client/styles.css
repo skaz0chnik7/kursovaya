@@ -1,0 +1,153 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 6px;
+    font-size: 1rem;
+    color:  #000a14;
+    background-color: #f4f6f9;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1.7rem;
+    color: #0437ae;
+}
+
+/* Основная структура */
+.main-container {
+    display: flex;
+    gap: 12px;
+    height: 90vh;
+}
+
+/* Предпросмотр изображения */
+#preview {
+    flex: 2; /* Задаем блок предпросмотра в 2 раза шире, чем блок функций */
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Убедимся, что элементы выстраиваются по колонке */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    text-align: center;
+    height: 100%; /* Блок занимает всю высоту родителя */
+}
+
+#preview h2 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #0437ae;
+}
+
+/* Настройки изображения в блоке предпросмотра */
+#uploadedImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    border: 1px solid #ccc;
+    transform-origin: center; 
+    transition: transform 0.2s ease; 
+}
+
+.controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для блоков форм */
+.controls form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0437ae;
+    margin-bottom: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Информация */
+#info {
+    background-color: #e9ecef;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Стили для обычных кнопок */
+button {
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0437ae;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1763b5;
+    transform: scale(1.02);
+}
+
+button:active {
+    background-color: #011f3e;
+}
+
+/* Стили для кнопки "Скачать изображение" */
+.download-button {
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff; /* Белый текст */
+    background-color: #28a745; /* Зелёный цвет */
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчёркивание */
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.download-button:hover {
+    background-color: #218838; /* Тёмно-зелёный при наведении */
+    transform: scale(1.02);
+}
+
+.download-button:active {
+    background-color: #1e7e34; /* Ещё темнее при нажатии */
+}

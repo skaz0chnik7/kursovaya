@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API для обработки изображений</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>API для обработки изображений</h1>
+
+    <div class="main-container">
+        <div id="preview">
+            <img id="uploadedImage" src="" alt="Предпросмотр">
+        </div>
+
+        <div class="controls">
+            <form>
+                <h3>Загрузка изображения</h3>
+                <label for="image">Выберите изображение:</label>
+                <input type="file" id="image" accept="image/*" required>
+            </form>
+
+            <form>
+                <h3>Сброс изменений</h3>
+                <button type="button" id="resetButton">Сбросить</button>
+            </form>
+
+            <form id="resizeForm">
+                <h3>Изменение размера</h3>
+                <label for="width">Ширина:</label>
+                <input type="number" id="width" required>
+                <label for="height">Высота:</label>
+                <input type="number" id="height" required>
+                <button type="button" id="resizeButton">Применить</button>
+            </form>
+
+            <form id="rotateForm">
+                <h3>Поворот</h3>
+                <label for="rotate">Угол (градусы):</label>
+                <input type="number" id="rotate" value="0">
+                <button type="button" id="rotateButton">Применить</button>
+            </form>
+
+            <form id="cropForm">
+                <h3>Обрезка</h3>
+                <label for="cropX">X:</label>
+                <input type="number" id="cropX" required>
+                <label for="cropY">Y:</label>
+                <input type="number" id="cropY" required>
+                <label for="cropWidth">Ширина:</label>
+                <input type="number" id="cropWidth" required>
+                <label for="cropHeight">Высота:</label>
+                <input type="number" id="cropHeight" required>
+                <button type="button" id="cropButton">Применить</button>
+            </form>
+
+            <form id="filterForm">
+                <h3>Фильтры</h3>
+                <label for="filterMode">Выберите фильтр:</label>
+                <select id="filterMode">
+                    <option value="grayscale">Оттенки серого</option>
+                    <option value="blur">Размытие</option>
+                    <option value="invert">Инверсия</option>
+                </select>
+                <button type="button" id="filterButton">Применить</button>
+            </form>
+
+            <form id="convertForm">
+                <h3>Конвертация</h3>
+                <label for="convertFormat">Формат:</label>
+                <select id="convertFormat">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="gif">GIF</option>
+                    <option value="webp">WEBP</option>
+                </select>
+                <button type="button" id="convertButton">Применить</button>
+            </form>
+
+            <form>
+                <h3>Информация об изображении</h3>
+                <button type="button" id="infoButton">Получить информацию</button>
+                <div id="info"></div>
+            </form>
+
+            <form>
+                <a id="downloadLink" href="#" download class="download-button" style="display: none;">Скачать изображение</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
