@@ -3,11 +3,11 @@ const uploadedImage = document.getElementById("uploadedImage");
 const downloadLink = document.getElementById("downloadLink");
 const infoBlock = document.getElementById("info");
 
-// Загруженное изображение
+
 let fileName = "";
 let scale = 1; // Изначальный масштаб изображения
 
-// Универсальная функция обновления изображения
+
 function updatePreview(blob) {
     const url = URL.createObjectURL(blob);
     uploadedImage.src = url;
@@ -15,7 +15,7 @@ function updatePreview(blob) {
     downloadLink.style.display = "block";
 }
 
-// Функция для масштабирования изображения
+// Масштабирование
 function scaleImage(delta) {
     scale += delta;
     if (scale < 0.1) scale = 0.1; // Минимальный масштаб
