@@ -49,7 +49,7 @@ func ResetHandler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Файл успешно сброшен: %s", newProcessedFilePath)
 }
 
-// findOriginalFile ищет файл в указанной директории по имени
+// ищет файл в указанной директории по имени
 func findOriginalFile(baseName, dir string) (string, string, error) {
 	files, err := os.ReadDir(dir)
 	if err != nil {
@@ -66,7 +66,7 @@ func findOriginalFile(baseName, dir string) (string, string, error) {
 	return "", "", fmt.Errorf("file not found")
 }
 
-// copyFile копирует файл из src в dst
+// копирует файл из src в dst
 func copyFile(src, dst string) error {
 	input, err := os.Open(src)
 	if err != nil {
